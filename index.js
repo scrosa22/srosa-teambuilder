@@ -62,12 +62,12 @@ const startQuestionPrompt = async () => {
       },
       {
         type: "input",
-        message: "What is your github username?",
-        name: "github",
+        message: "What is your username?",
+        name: "username",
         when: ({ role }) => role == "Engineer",
         validate: function (answer) {
           if (answer.length < 1) {
-            return console.log("Please enter a valid github username.");
+            return console.log("Please enter a valid username.");
           }
           return true;
         },
@@ -98,7 +98,7 @@ const startQuestionPrompt = async () => {
         userResponse.name,
         userResponse.id,
         userResponse.email,
-        userResponse.github
+        userResponse.username
       );
       staffArray.push(newEngineer);
     } else {
