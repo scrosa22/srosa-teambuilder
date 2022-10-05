@@ -1,8 +1,8 @@
 import inquirer from 'inquirer';
 
-import Manager from "./lib/Manager.js";
-import Engineer from "./lib/engineer.js";
-import Intern from "./lib/intern.js";
+import manager from "./lib/manager.js";
+import engineer from "./lib/engineer.js";
+import intern from "./lib/intern.js";
 
 const generateTeam = require("./src/template.js");
 
@@ -86,16 +86,16 @@ const startQuestionPrompt = async () => {
         },
       },
     ]);
-    if (userResponse.role === "Manager") {
-      let newManager = new Manager(
+    if (userResponse.role === "manager") {
+      let newManager = new manager(
         userResponse.name,
         userResponse.id,
         userResponse.email,
         userResponse.officeNumber
       );
       staffArray.push(newManager);
-    } else if (basicAnswers.role === "Engineer") {
-      let newEngineer = new Engineer(
+    } else if (basicAnswers.role === "engineer") {
+      let newEngineer = new engineer(
         userResponse.name,
         userResponse.id,
         userResponse.email,
@@ -103,7 +103,7 @@ const startQuestionPrompt = async () => {
       );
       staffArray.push(newEngineer);
     } else {
-      let newIntern = new Intern(
+      let newIntern = new intern(
         userResponse.name,
         userResponse.id,
         userResponse.email,
@@ -121,7 +121,7 @@ const startQuestionPrompt = async () => {
         name: "newMember",
         type: "list",
         choices: ["Add new team member", "Create team"],
-        message: "What would you like to do next?",
+        message: "What action would you like to do next?",
       },
     ]);
   
