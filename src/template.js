@@ -2,16 +2,16 @@ export default function generateTeam(staffArray) {
     let mainHTML = "";
     for (let i = 0; i < staffArray.length; i++) {
       mainHTML += `
-      <div class="col-3 employee-card text-white bg-primary mb-3">
-      <div class="card-header text-center text-white"><h3>${staffArray[i].getRole()}</h3></div>
-      <h3 class="card-title">Name: ${staffArray[i].name}</h3>
+      <div class="col-3 employee-card text-white bg-danger mb-3">
+      <div class="card-header text-center text-white"><h3>${staffArray[i].role}</h3></div>
+      <h5 class="card-title">Name: ${staffArray[i].name}</h5>
       <p class="card-text">ID #: ${staffArray[i].id}</p>
       <p class="card-text">Email: ${staffArray[i].email}</p>`;
 
-      let role = staffArray[i].getRole();
-      if (role == "manager") {
+      let role1 = staffArray[i].role;
+      if (role1 == 'manager') {
         mainHTML += `<p class="card-text">Work no: ${staffArray[i].officeNumber}</p></div><div class=col-1></div>`;
-      } else if (role == "engineer") {
+      } else if (role1 == 'engineer') {
         mainHTML += `<p class="card-text">Username: <p ${staffArray[i].username}">${staffArray[i].username}</p></p></div><div class=col-1></div>`;
       } else {
         mainHTML += `<p class="card-text">School: ${staffArray[i].school}</p></div><div class=col-1></div>`;
@@ -30,7 +30,7 @@ export default function generateTeam(staffArray) {
         </head>
         <body>
           <header class="hero bg-primary">
-            <h1 class="display-3 text-center">Team Profile</h1>
+            <h1 class="display-3 text-center text-white">Team Profiles</h1>
           </header>
           <main>
             <div class="container">
