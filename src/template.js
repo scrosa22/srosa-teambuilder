@@ -12,7 +12,7 @@ export default function generateTeam(staffArray) {
       if (staffArray[i].role == 'manager') {
         mainHTML += `<p class="card-text">office no: ${staffArray[i].officeNumber}</p></div><div class=col-1></div>`;
       } else if (staffArray[i].role == 'engineer') {
-        mainHTML += `<p class="card-text">Username: <p ${staffArray[i].gitusername}">${staffArray[i].gitusername}</p></p></div><div class=col-1></div>`;
+        mainHTML += `<p class="card-text">Username: <p ${staffArray[i].gitusername}"></p></p></div><div class=col-1></div>`;
       } else {
         mainHTML += `<p class="card-text">School: ${staffArray[i].school}</p></div><div class=col-1></div>`;
       }
