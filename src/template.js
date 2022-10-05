@@ -8,11 +8,11 @@ export default function generateTeam(staffArray) {
       <p class="card-text">ID #: ${staffArray[i].id}</p>
       <p class="card-text">Email: ${staffArray[i].email}</p>`;
 
-      let role1 = staffArray[i].role;
-      if (role1 == 'manager') {
+      let role = staffArray[i].role;
+      if (role == 'manager') {
         mainHTML += `<p class="card-text">Work no: ${staffArray[i].officeNumber}</p></div><div class=col-1></div>`;
-      } else if (role1 == 'engineer') {
-        mainHTML += `<p class="card-text">Username: <p ${staffArray[i].username}">${staffArray[i].username}</p></p></div><div class=col-1></div>`;
+      } else if (role == 'engineer') {
+        mainHTML += `<p class="card-text">Username: <p ${staffArray[i].gitusername}">${staffArray[i].gitusername}</p></p></div><div class=col-1></div>`;
       } else {
         mainHTML += `<p class="card-text">School: ${staffArray[i].school}</p></div><div class=col-1></div>`;
       }

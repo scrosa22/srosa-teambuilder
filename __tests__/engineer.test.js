@@ -26,5 +26,5 @@ test('get username test', () => {
     const testing = 'username';
     const testrun = new Engineer ('john', 1, 'smith@gmail.com', testing)
 
-    expect(testrun.username).toBe(testing)
+    expect(testrun.gitusername).toBe(testing)
 });
