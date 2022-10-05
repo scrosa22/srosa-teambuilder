@@ -1,8 +1,8 @@
 import inquirer from 'inquirer';
 
-import manager from "./lib/manager.js";
-import engineer from "./lib/engineer.js";
-import intern from "./lib/intern.js";
+import Manager from "./lib/manager.js";
+import Engineer from "./lib/engineer.js";
+import Intern from "./lib/intern.js";
 
 const generateTeam = require("./src/template.js");
 
@@ -87,7 +87,7 @@ const startQuestionPrompt = async () => {
       },
     ]);
     if (userResponse.role === "manager") {
-      let newManager = new manager(
+      let newManager = new Manager(
         userResponse.name,
         userResponse.id,
         userResponse.email,
@@ -95,7 +95,7 @@ const startQuestionPrompt = async () => {
       );
       staffArray.push(newManager);
     } else if (basicAnswers.role === "engineer") {
-      let newEngineer = new engineer(
+      let newEngineer = new Engineer(
         userResponse.name,
         userResponse.id,
         userResponse.email,
@@ -103,7 +103,7 @@ const startQuestionPrompt = async () => {
       );
       staffArray.push(newEngineer);
     } else {
-      let newIntern = new intern(
+      let newIntern = new Intern(
         userResponse.name,
         userResponse.id,
         userResponse.email,
