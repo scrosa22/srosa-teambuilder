@@ -23,7 +23,7 @@ test('get email test', () => {
 });
 
 test('get username test', () => {
-    const testing = 'userName1';
+    const testing = 'username';
     const testrun = new Engineer ('john', 1, 'smith@gmail.com', testing)
 
     expect(testrun.username).toBe(testing)

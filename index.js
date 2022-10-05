@@ -92,7 +92,8 @@ const startQuestionPrompt = async () => {
         userResponse.name,
         userResponse.id,
         userResponse.email,
-        userResponse.officeNumber
+        userResponse.officeNumber,
+        userResponse.role
       );
       staffArray.push(newManager);
     } else if (userResponse.role === "engineer") {
@@ -100,7 +101,8 @@ const startQuestionPrompt = async () => {
         userResponse.name,
         userResponse.id,
         userResponse.email,
-        userResponse.username
+        userResponse.username,
+        userResponse.role
       );
       staffArray.push(newEngineer);
     } else {
@@ -108,7 +110,8 @@ const startQuestionPrompt = async () => {
         userResponse.name,
         userResponse.id,
         userResponse.email,
-        userResponse.school
+        userResponse.school,
+        userResponse.role
       );
       staffArray.push(newIntern);
     }
