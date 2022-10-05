@@ -1,9 +1,10 @@
-const inquirer = require("inquirer");
-const fs = require("fs");
+import inquirer from 'inquirer';
+
+import Manager from "./lib/Manager.js";
+import Engineer from "./lib/engineer.js";
+import Intern from "./lib/intern.js";
+
 const generateTeam = require("./src/template.js");
-const Manager = require("./lib/Manager");
-const Engineer = require("./lib/Engineer");
-const Intern = require("./lib/Intern");
 
 let staffArray = [];
 
