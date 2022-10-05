@@ -48,13 +48,13 @@ const startQuestionPrompt = async () => {
         type: "list",
         message: "What is your new role on the team?",
         name: "role",
-        choices: ["Manager", "Engineer", "Intern"],
+        choices: ["manager", "engineer", "intern"],
       },
       {
         type: "input",
         message: "What is your office number?",
         name: "officeNumber",
-        when: ({ role }) => role == "Manager",
+        when: ({ role }) => role == "manager",
         validate: function (answer) {
           if (answer.length < 1) {
             return console.log("Please enter a valid office number.");
@@ -66,7 +66,7 @@ const startQuestionPrompt = async () => {
         type: "input",
         message: "What is your username?",
         name: "username",
-        when: ({ role }) => role == "Engineer",
+        when: ({ role }) => role == "engineer",
         validate: function (answer) {
           if (answer.length < 1) {
             return console.log("Please enter a valid username.");
@@ -78,7 +78,7 @@ const startQuestionPrompt = async () => {
         type: "input",
         message: "What is the name of your school?",
         name: "school",
-        when: ({ role }) => role == "Intern",
+        when: ({ role }) => role == "intern",
         validate: function (answer) {
           if (answer.length < 1) {
             return console.log("Please enter a valid school name.");
@@ -87,7 +87,8 @@ const startQuestionPrompt = async () => {
         },
       },
     ]);
-    if (userResponse.role === "manager") {
+
+    if (userResponse.role == "manager") {
       let newManager = new Manager(
         userResponse.name,
         userResponse.id,
@@ -96,7 +97,7 @@ const startQuestionPrompt = async () => {
         userResponse.role
       );
       staffArray.push(newManager);
-    } else if (userResponse.role === "engineer") {
+    } else if (userResponse.role == "engineer") {
       let newEngineer = new Engineer(
         userResponse.name,
         userResponse.id,
