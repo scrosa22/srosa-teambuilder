@@ -1,10 +1,10 @@
 import inquirer from 'inquirer';
-
+import fs from 'fs'
 import Manager from "./lib/manager.js";
 import Engineer from "./lib/engineer.js";
 import Intern from "./lib/intern.js";
 
-const generateTeam = require("./src/template.js");
+import generateTeam from "./src/template.js"
 
 let staffArray = [];
 

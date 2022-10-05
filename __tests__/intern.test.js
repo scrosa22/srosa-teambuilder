@@ -22,9 +22,9 @@ test('get email test', () => {
     expect(testrun.email).toBe(testing)
 });
 
-test('get username test', () => {
-    const testing = 'userName1';
+test('get school test', () => {
+    const testing = 'school';
     const testrun = new Intern ('john', 1, 'smith@gmail.com', testing)
 
-    expect(testrun.username).toBe(testing)
+    expect(testrun.school).toBe(testing)
 });
