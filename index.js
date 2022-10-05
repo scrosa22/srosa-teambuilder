@@ -1,5 +1,6 @@
 import inquirer from 'inquirer';
 import fs from 'fs'
+
 import Manager from "./lib/manager.js";
 import Engineer from "./lib/engineer.js";
 import Intern from "./lib/intern.js";
@@ -51,7 +52,7 @@ const startQuestionPrompt = async () => {
       },
       {
         type: "input",
-        message: "What is your office phone number?",
+        message: "What is your office number?",
         name: "officeNumber",
         when: ({ role }) => role == "Manager",
         validate: function (answer) {

@@ -5,13 +5,13 @@ export default function generateTeam(staffArray) {
       <div class="col-3 employee-card text-white bg-primary mb-3">
       <div class="card-header text-center text-white"><h3>${staffArray[i].getRole()}</h3></div>
       <h3 class="card-title">Name: ${staffArray[i].name}</h3>
-      <p class="card-text">ID#: ${staffArray[i].id}</p>
-      <p class="card-text">Email: <a href="mailto:${staffArray[i].email}">${staffArray[i].email}</a></p>`;
+      <p class="card-text">ID #: ${staffArray[i].id}</p>
+      <p class="card-text">Email: ${staffArray[i].email}</p>`;
 
       let role = staffArray[i].getRole();
-      if (role === "Manager") {
+      if (role === "manager") {
         mainHTML += `<p class="card-text">Work no: ${staffArray[i].officeNumber}</p></div><div class=col-1></div>`;
-      } else if (role === "Engineer") {
+      } else if (role === "engineer") {
         mainHTML += `<p class="card-text">Username: <p ${staffArray[i].username}">${staffArray[i].username}</p></p></div><div class=col-1></div>`;
       } else {
         mainHTML += `<p class="card-text">School: ${staffArray[i].school}</p></div><div class=col-1></div>`;
