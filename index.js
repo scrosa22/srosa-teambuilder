@@ -94,7 +94,7 @@ const startQuestionPrompt = async () => {
         userResponse.officeNumber
       );
       staffArray.push(newManager);
-    } else if (basicAnswers.role === "engineer") {
+    } else if (userResponse.role === "engineer") {
       let newEngineer = new Engineer(
         userResponse.name,
         userResponse.id,
